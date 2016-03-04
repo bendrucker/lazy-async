@@ -35,3 +35,26 @@ test('success', function (t) {
     triggerLoad = callback
   }
 })
+
+test('error', function (t) {
+  t.plan(4)
+
+  var triggerLoad
+  var lazy = Lazy(['foo.get'], load)
+
+  lazy.foo.get('bar', function (err, data) {
+    t.ok(err, 'queued error')
+    t.equal(err.message, 'Library failed to load')
+  })
+
+  triggerLoad(new Error('Library failed to load'))
+
+  lazy.foo.get('bar', function (err, data) {
+    t.ok(err, 'error after load failure')
+    t.equal(err.message, 'Library failed to load')
+  })
+
+  function load (callback) {
+    triggerLoad = callback
+  }
+})

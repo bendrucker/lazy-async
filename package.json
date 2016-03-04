@@ -1,0 +1,40 @@
+{
+  "name": "lazy-async",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Generate a lazy-execution API by queueing requests",
+  "license": "MIT",
+  "repository": "bendrucker/lazy-async",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "lazy",
+    "async",
+    "queue",
+    "request",
+    "load",
+    "remote"
+  ],
+  "devDependencies": {
+    "tape": "^4.0.0",
+    "standard": "^6.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "array-last": "~1.0.2",
+    "assert-equal": "~1.0.0",
+    "assert-ok": "~1.0.0",
+    "call-all-fns": "~1.0.0",
+    "dezalgo": "~1.0.3",
+    "dot-prop": "~2.4.0",
+    "to-array": "~0.1.4"
+  }
+}

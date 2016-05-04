@@ -36,7 +36,7 @@ All subsequent calls are either routed to the loaded API or fulfilled with the o
 *Required*  
 Type: `array[string]`
 
-An array of methods in dot property syntax, e.g. `users.fetch`. These methods should exist on the remote API once loaded.
+An array of methods in dot property syntax, e.g. `users.fetch`. These methods should exist on the remote API once loaded. Methods may accept a callback as their last argument. 
 
 ##### load
 

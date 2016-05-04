@@ -35,7 +35,10 @@ function Lazy (methods, load) {
       var args = arguments
       onReady(function (err, api) {
         if (!err) return dot.get(api, method).apply(null, args)
-        return last(toArray(args))(err)
+        var callback = last(toArray(args))
+        if (typeof callback === 'function') {
+          return callback(err)
+        }
       })
     }
   }

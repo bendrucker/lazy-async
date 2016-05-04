@@ -36,6 +36,32 @@ test('success', function (t) {
   }
 })
 
+test('no callback', function (t) {
+  t.plan(4)
+
+  var triggerLoad
+  var lazy = Lazy(['foo.get'], load)
+
+  t.equal(typeof lazy.foo.get, 'function', 'defines interface')
+
+  lazy.foo.get('bar')
+
+  triggerLoad(null, {
+    foo: {
+      get: function (input) {
+        t.equal(input, 'bar', 'redirects input')
+      }
+    }
+  })
+
+  lazy.foo.get('bar')
+
+  function load (callback) {
+    t.equal(typeof callback, 'function')
+    triggerLoad = callback
+  }
+})
+
 test('error', function (t) {
   t.plan(4)
 

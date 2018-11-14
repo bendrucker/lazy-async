@@ -1,4 +1,4 @@
-# lazy-async [![Build Status](https://travis-ci.org/bendrucker/lazy-async.svg?branch=master)](https://travis-ci.org/bendrucker/lazy-async)
+# lazy-async [![Build Status](https://travis-ci.org/bendrucker/lazy-async.svg?branch=master)](https://travis-ci.org/bendrucker/lazy-async) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/lazy-async.svg)](https://greenkeeper.io/)
 
 > Generate a lazy-execution API by queueing requests
 

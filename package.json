@@ -34,7 +34,7 @@
     "assert-ok": "~1.0.0",
     "call-all-fns": "~1.0.0",
     "dezalgo": "~1.0.3",
-    "dot-prop": "~4.2.0",
+    "dot-prop": "~5.0.0",
     "to-array": "~0.1.4"
   }
 }
